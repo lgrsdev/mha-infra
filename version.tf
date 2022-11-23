@@ -27,5 +27,12 @@ terraform {
   }
 
   required_version = "~> 1.3"
+
+  backend "s3" {
+    bucket = "mha-infra"
+    key    = "tfstate"
+    region = var.region
+    shared_credentials_file = "~/.aws/credentials"
+  }
 }
 
