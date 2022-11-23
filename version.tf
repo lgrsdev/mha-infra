@@ -31,7 +31,7 @@ terraform {
   backend "s3" {
     bucket = "mha-infra"
     key    = "tfstate"
-    region = var.region
+    region = "us-east-2"
     shared_credentials_file = "~/.aws/credentials"
   }
 }
